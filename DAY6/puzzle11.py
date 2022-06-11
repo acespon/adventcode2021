@@ -10,7 +10,7 @@ with open("puzzleinput.txt") as f:
 print(len(initial_state))
 
 #after one day
-for i in range(80):
+for i in range(256):
     for fish in range(len(initial_state)):
         if initial_state[fish] == 0:
             #Reset timer and create new fish
@@ -18,6 +18,7 @@ for i in range(80):
             initial_state = np.append(initial_state,8)
         else:
             initial_state[fish] -= 1
+    print(len(initial_state))
             
 answer = len(initial_state)
 
